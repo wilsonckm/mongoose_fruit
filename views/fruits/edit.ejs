@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<h3> Edit Fruit</h3>
+<form action="/fruits/<%=fruit._id %>?_method=PUT" method="POST">
+    <label>Name
+        <input type="text" name="name" value="<%=fruit.name%>">
+      </label><br>
+      <label>Color
+        <input type="text" name="color" value="<%=fruit.color%>">
+      </label><br>
+      <label>Ripe
+        <input type="checkbox" name="ripe" <%=fruit.ripe ? 'checked' : ''%>>
+      </label><br>
+      <label>Quantity
+        <input type="number" name="quantity" value="<%=fruit.quantity%>">
+      <button type="submit">Update Fruit</button>
+</form>
+<%- include('../partials/footer') %>

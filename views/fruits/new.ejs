@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+    <form action="/fruits" method="POST">
+        <label>Name
+            <input type="text" name="name">
+          </label><br>
+          <label>Color
+            <input type="text" name="color">
+          </label><br>
+          <label>Ripe
+            <input type="checkbox" name="ripe" checked>
+          </label><br>
+          <label>Quantity
+            <input type="number" name="quantity">
+          <button type="submit">Add Fruit</button>
+    </form>
+    <p><%= errorMsg %></p>
+<%- include('../partials/footer') %>

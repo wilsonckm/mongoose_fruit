@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Ripe</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+<% fruits.forEach(function(f){ %>
+    <tr>
+        <td>
+
+            <form 
+            action="/fruits/<%= f.id %>?_method=Delete" 
+            method="POST"
+            class="delete-form"
+            >
+            <button type="submit">X</button>
+            
+        </form>
+    </td>
+        <td><a href="/fruits/<%=f._id %>"> <%=f.name%></a></td>
+        <td><%=f.color%></td>
+        <td><%=f.ripe ? 'Yes' : 'Nope' %></td>
+        <td><%=f.quantity%></td>
+        
+    </tr>
+<% }) %> 
+    </tbody>
+    </table>
+<%- include('../partials/footer') %>
+    

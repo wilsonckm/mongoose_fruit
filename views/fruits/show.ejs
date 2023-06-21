@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<h3> <%= fruits.name  %></h3>
+<table>
+    <thead>
+        <tr>
+          <th>Color</th>
+          <th>Ripe</th>
+          <th>Quantity</th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <td><%=fruits.color%></td>
+            <td><%=fruits.ripe ? 'Yes' : 'Nope' %></td>
+            <td><%=fruits.quantity%></td>
+        </tr>
+        
+    </thead>
+</table>
+<a href = "/fruits/<%=fruits._id %>/edit">Edit Fruit</a>
+
+
+<%- include('../partials/footer') %>
